@@ -1,5 +1,5 @@
 /*
-Abstract Factory pattern is creational desing pattern that lets you build families of realated objects without specifying their concrete classes.
+Abstract Factory pattern is creation design pattern that lets you build families of related objects without specifying their concrete classes.
 
 Problem:
  Imagine that you’re creating a furniture shop simulator. Your code consists of classes that represent:
@@ -16,7 +16,7 @@ Solution:
  Step 2: Create variants of the products, for Chair create variants like Victorian chair, Art chair, Modern chair etc., for Sofa create variants like 
         Victorian Sofa, Art Sofa, Modern Sofa etc. same for Coffee table as well.
  Step 3: Create an abstract Factory interface which has the possible products that it can create or make.
- Step 4: Create Combos (families) by implementing the abstract factory interface which implements above interface's memebers.
+ Step 4: Create Combos (families) by implementing the abstract factory interface which implements above interface's members.
  Step 5: Factory class which creates the objects based on client's needs
  Step 6: Factory registry
 

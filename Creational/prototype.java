@@ -1,5 +1,5 @@
 /*
- Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
+ Prototype is a creation design pattern that lets you copy existing objects without making your code dependent on their classes.
 
  Why Cloning objects?
  1. If we have to copy each property from one to another, it may not be reliable if the object has lot of complex properties, which can lead to errors as we have to

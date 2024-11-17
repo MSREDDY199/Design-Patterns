@@ -3,13 +3,13 @@ If we want to restrict the creation of objects of a class or wishes to maintain 
 
 How to create singleton pattern or single object?
 -> Create a static variable which can get assigned with a new instance, when it is created.
--> Make the constructor private, so that it cannot bw accessed from outside of the class.
+-> Make the constructor private, so that it cannot be accessed from outside of the class.
 -> Create a public static method which can be called globally and return this single object/instance of this class.
 
 Why use singleton pattern?
 -> Provides global access to the instance.
 -> Only one instance is created, which avoid conflicting of multiple objects.
--> helpful in scenarios like databse connections.
+-> helpful in scenarios like database connections.
 
 Pros:
 -> Lazy initialization: Instance is created when it is required.
@@ -27,7 +27,7 @@ class Product {
     private static Product product; // create a static variable to store the single object
     String productName;
 
-    // constructor should be private
+    // constructor should be private as it prevents other classes from instantiating the Singleton class directly.
     private Product (String productName) {
         this.productName = productName;
     }

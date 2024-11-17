@@ -1,5 +1,5 @@
 /*
-Abstract Factory pattern is creational desing pattern that lets you build families of realated objects without specifying their concrete classes.
+Abstract Factory pattern is creation design pattern that lets you build families of related objects without specifying their concrete classes.
 
 Problem:
  Imagine we're at Mc Donald's, we see there different combo meal options available, Veg and Non-Veg combos. Each combo has it's respective burger and common french fries.
@@ -11,7 +11,7 @@ Solution:
  Step 2: Create variants of the products, for Burger create variants like Veg-burger, Non-Veg burger, Mutton burger etc., for French fries create variants like 
         Salted fries, peri peri fries, normal fries etc..
  Step 3: Create an abstract Factory interface which has the possible products that it can create or make.
- Step 4: Create Combos (families) by implementing the abstract factory interface which implements above interface's memebers.
+ Step 4: Create Combos (families) by implementing the abstract factory interface which implements above interface's members.
  Step 5: Factory class which creates the objects based on client's needs
 
   Alternatives to class registry 
@@ -24,7 +24,7 @@ Solution:
 import java.util.*;
 
 // Factory class
-class McDonalds {
+class McDonald {
     public static void main(String[] args) {
         FactoryRegistry.register("Veg", VegCombo.class);
         FactoryRegistry.register("NonVeg", NonVegCombo.class);

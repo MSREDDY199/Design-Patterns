@@ -1,5 +1,5 @@
 /*
- Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and 
+ Builder is a creation design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and 
  representations of an object using the same construction code.
 
  Problem:
@@ -7,18 +7,18 @@
  building roof etc. This would make us having lot of sub classes and adding any new thing to the house would make the list of subclasses keep growing.
  There's is one approach, you can create a giant constructor with all parameters in the base House class, this would eliminate the sub classes but at the end
  our constructor may have lot of unused parameters and makes the constructor call pretty ugly.
- Not only subclasses, Now let's say a house has parking and garder, and other has only parking and the other has only garden, so to create objects for these three houses
- we would create three different constuctors or even more if we find more different houses. This is a cumbersome process.
+ Not only subclasses, Now let's say a house has parking and garden, and other has only parking and the other has only garden, so to create objects for these three houses
+ we would create three different constructor or even more if we find more different houses. This is a cumbersome process.
 
  Solution:
  The Builder pattern suggests that you extract the object construction code out of its own class and move it to separate objects called builders.
- This pattern organises several steps in creating an object (build walls, build roof). To create an object we need execute these series of steps 
+ This pattern organizes several steps in creating an object (build walls, build roof). To create an object we need execute these series of steps 
  that are necessary for us.
 
- Director class (optional) can be used to define series of steps in it and it can be exucuted based on the use case. We can also go directly to the 
+ Director class (optional) can be used to define series of steps in it and it can be executed based on the use case. We can also go directly to the 
  client class and call the methods from there, but having director class helps us in keeping various construction routines in it, so that we can reuse them.
 
- Below example explaination:
+ Below example explanation:
  We have many types of Cars manufactured by company, each has different set of features. As the unique features list grows from car to car, the number of different
  constructor combinations also grows which is very challenging to maintain. To solve this Builder Design pattern comes into picture.
  Here we have two different cars, one has both GPS and Sunroof while other doesn't. Instead of creating two different constructors, we've a static CarBuilder class to
@@ -128,7 +128,7 @@
     }
 }
 
-// Director class which has set of steps already defined, so based on needs we can direclty reuse them
+// Director class which has set of steps already defined, so based on needs we can directly reuse them or we can also build them in main class directly
 class VehicleBuildingDirector {
     public Car.CarBuilder builder;
     

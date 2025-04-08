@@ -1,16 +1,15 @@
 /*
-    Observer Pattern
-    ````````````````
+Definition:
     Observer is a behavioral design pattern that notifies multiple objects observing if there in any events or change that happen in the object they're observing.
 
-    Problem:
+Problem:
     Imagine that you have two types of objects: a Customer and a Store. The customer is very interested in a particular brand of product (say, it’s a new model of the iPhone) 
     which should become available in the store very soon.
     The customer could visit the store every day and check product availability. But while the product is still en route, most of these trips would be pointless.
     On the other hand, the store could send tons of emails (which might be considered spam) to all customers each time a new product becomes available, and this would save some customers 
     from endless trips to the store. At the same time, it’d upset other customers who aren’t interested in new products.
 
-    Solution:
+Solution:
     The object that has some interesting state is often called subject, but since it’s also going to notify other objects about the changes to its state, we’ll call it publisher. 
     All other objects that want to track changes to the publisher’s state are called subscribers.
 
@@ -18,12 +17,23 @@
     from that publisher. Fear not! Everything isn’t as complicated as it sounds. In reality, this mechanism consists of 1) an array field for storing a list of references to subscriber objects 
     and 2) several public methods which allow adding subscribers to and removing them from that list.
 
-    Pros:
+Use cases:
+    1. Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
+    2. Use the pattern when some objects in your app must observe others, but only for a limited time or in specific cases.
+
+Pros:
     1. Open/Closed Principle. You can introduce new subscriber classes without having to change the publisher’s code (and vice versa if there’s a publisher interface).
     2. You can establish relations between objects at runtime.
 
-    Cons:
+Cons:
     1. Subscribers are notified in random order.
+
+Examples:
+    1. A news agency notifies its subscribers (e.g., TV channels, newspapers, apps) whenever there's breaking news.
+    2. Investors get notified whenever the price of a stock changes.
+    3. A weather station broadcasts updates to displays whenever the temperature changes.
+    4. A movie booking system notifies when the bookings for a interested movie are opened.
+    5. A user follows multiple social media influencers and gets notified whenever one of them posts new content.
 
 */
 

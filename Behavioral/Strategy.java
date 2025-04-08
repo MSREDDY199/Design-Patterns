@@ -22,7 +22,7 @@ Solution:
 Use cases:
     1. Use Strategy pattern if there are lot of conditional statements that switches between different variants of the same algorithm.
     2. Use Strategy pattern, when you want to use different variants of an algorithm within an object and be able to switch from one algorithm to another.
-    3. Use Strategy pattern, when you massive similar classes that only differ in the way they execute.
+    3. Use Strategy pattern, when you have massive similar classes that only differ in the way they execute.
 
 Pros:
     1. You can swap algorithms used inside an object at runtime.

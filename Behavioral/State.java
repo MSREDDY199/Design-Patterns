@@ -1,26 +1,30 @@
 /*
-    State design pattern
-    ````````````````````
+Definition:
     State is a behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
 
-    Problem:
+Problem:
     State machines are usually implemented with lots of conditional statements (if or switch) that select the appropriate behavior depending on the current state of the object.
     The biggest weakness of a state machine based on conditionals reveals itself once we start adding more and more states and state-dependent behaviors to the 
     Document class (Draft, Moderation and Published). Code like this is very difficult to maintain because any change to the transition logic may require changing 
     state conditionals in every method.
 
-    Solution:
+Solution:
     The State pattern suggests that you create new classes for all possible states of an object and extract all state-specific behaviors into these classes.
     To transition the context into another state, replace the active state object with another object that represents that new state. This is possible only if all state classes 
     follow the same interface and the context itself works with these objects through that interface.
 
-    Pros:
+Use cases:
+    1. Use the State pattern when you have an object that behaves differently depending on its current state, the number of states is enormous, and the state-specific code changes frequently.
+    2. Use the pattern when you have a class polluted with massive conditionals that alter how the class behaves according to the current values of the class’s fields.
+    3. Use State when you have a lot of duplicate code across similar states and transitions of a condition-based state machine.
+
+Pros:
     1. Single Responsibility Principle, You can decouple classes that invoke operations from classes that perform operations.
     2. Open/Closed Principle, You can introduce new handlers into the app without breaking the existing client code. 
     3. Simplify the code of the context by eliminating bulky state machine conditionals.
 
-    Cons:
-    Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
+Cons:
+    1. Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
 
 */
 

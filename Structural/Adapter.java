@@ -74,6 +74,7 @@ class SquarePegAdapter extends RoundPeg {
     SquarePeg squarePeg;
 
     public SquarePegAdapter (SquarePeg squarePeg) {
+        super(squarePeg.getWidth() * Math.sqrt(2)/2);
         this.squarePeg = squarePeg;
     }
 
@@ -86,7 +87,7 @@ class Main {
     public static void main(String[] args) {
         RoundHole hole = new RoundHole(5);
         RoundPeg peg = new RoundPeg(5);
-        System.out.println("does peg fits: "+hole.fits(peg));
+        System.out.println("does peg fits: "+hole.fits(peg)); // fits
 
         SquarePeg squarePeg = new SquarePeg(5);
         SquarePegAdapter adapter = new SquarePegAdapter(squarePeg);

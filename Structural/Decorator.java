@@ -41,11 +41,11 @@ interface Coffee {
 // // Concrete Component, base of any item
 class BaseCoffee implements Coffee {
 
-    double getCost() {
+    public double getCost() {
         return 1.0;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return "Base coffee ";
     }
 }
@@ -58,11 +58,11 @@ class CoffeeDecorator implements Coffee {
         this.coffee = coffee;
     }
 
-    double getCost() {
+    public double getCost() {
         return coffee.getCost();
     }
 
-    String getDescription() {
+    public String getDescription() {
         return coffee.getDescription();
     }
 }
@@ -74,11 +74,11 @@ class SugarDecorator extends CoffeeDecorator {
         super(coffee);
     }
 
-    double getCost() {
+    public double getCost() {
         return super.getCost()+1;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return super.getDescription() + ", sugar";
     }
 }
@@ -90,11 +90,11 @@ class MilkDecorator extends CoffeeDecorator {
         super(coffee);
     }
 
-    double getCost() {
+    public double getCost() {
         return super.getCost()+1;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return super.getDescription() + ", milk";
     }
 }
